@@ -1,0 +1,33 @@
+RewriteEngine On
+RewriteBase /
+
+# Exclude specific file types from rewriting
+RewriteCond %{REQUEST_URI} !\.(css|js|jpg|jpeg|png|gif|ico)$ [NC]
+
+# Rewrite URLs for assets to the base URL
+RewriteRule ^(css|js|images|ico)/(.+)$ /$1/$2 [L,R=301]
+
+# Check if the requested URL is not a physical file or directory
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Rewrite URLs for product-category
+RewriteRule ^category/([^/]+)/?$ /categories.php?cslug=$1 [QSA,L]
+
+# Rewrite URLs for product-detail
+RewriteRule ^product/([^/]+)/?$ /product.php?pslug=$1 [QSA,L]
+<IfModule mod_headers.c>
+    Header set Access-Control-Allow-Origin "http://localhost"
+    Header set Access-Control-Allow-Methods "GET, POST, PUT, DELETE, OPTIONS"
+    Header set Access-Control-Allow-Headers "Origin, X-Requested-With, Content-Type, Accept, Authorization"
+</IfModule>
+ErrorDocument 404 /index.php
+# Enable URL rewriting
+RewriteEngine On
+
+# Exclude existing files and directories from redirect rules
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Redirect all other requests to redirect.php for handling
+RewriteRule ^(.*)$ redirect.php [QSA,L]

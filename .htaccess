@@ -1,0 +1,37 @@
+RewriteEngine On
+RewriteBase /subserve/
+
+# Allow Cross-Origin Requests (CORS) from localhost
+<IfModule mod_headers.c>
+    Header set Access-Control-Allow-Origin "http://localhost"
+    Header set Access-Control-Allow-Methods "GET, POST, OPTIONS"
+    Header set Access-Control-Allow-Headers "Content-Type, Authorization"
+</IfModule>
+
+# Exclude specific file types from rewriting
+RewriteCond %{REQUEST_URI} !\.(css|js|jpg|jpeg|png|gif|ico)$ [NC]
+
+# Check if the requested URL is not a physical file or directory
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Rewrite URLs for assets (CSS, JS, Images, etc.) to the base URL
+RewriteRule ^(css|js|images|ico)/(.+)$ /subserve/$1/$2 [L,R=301]
+
+# Rewrite URLs for product-category
+RewriteRule ^category/([^/]+)/?$ /subserve/categories.php?cslug=$1 [QSA,L]
+
+# Rewrite URLs for blog-detail
+RewriteRule ^blog/([^/]+)/?$ /subserve/blog-detail.php?slug=$1 [QSA,L]
+
+# Rewrite URLs for product-detail
+RewriteRule ^product/([^/]+)/?$ /subserve/product.php?pslug=$1 [QSA,L]
+
+# Rewrite URLs for edit-product in the wr-admin section
+RewriteRule ^wr-admin/pages/products/edit-product/([^/]+)/?$ /subserve/wr-admin/pages/products/edit-product.php?epslug=$1 [QSA,L]
+
+# Rewrite URLs for order-details in my-account
+RewriteRule ^my-account/order-details/([^/]+)/?$ /subserve/my-account/order-details.php?oslug=$1 [QSA,L]
+
+# Custom 404 Error Page
+ErrorDocument 404 /subserve/index.php
