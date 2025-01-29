@@ -298,11 +298,11 @@ html {
     border-radius: 0.28571rem 0 0 0.28571rem;
     padding-right: 5.25rem;
     font-family: 'Poppins';
-    font-weight: 300 !important;!i;!;
+    font-weight: 300 !important;
 }
 
 .another-top-header form.search-form  .search-submit {
-    background: #ff482e;
+    background: #031520;
     border: none;
     bottom: 0;
     color: white;
@@ -655,7 +655,7 @@ span.cart-label {
     padding-right: 25px !important;
 }
 .another-top-header {
-    border-bottom: 2px solid #f74423;
+    border-bottom: 2px solid #031520;
 }
 .number-div {
     display: flex;
@@ -1684,6 +1684,48 @@ button.t-y-btn {
 .nav > li{
   position:relative;
 }
+
+.blog-grid-1 .blog__thumb img{
+    width:100%;
+    height:180px;
+    object-fit: cover;
+    object-position: center;
+    transition: 0.5s;
+}
+.blog__content {
+    padding: 23px 20px;
+}
+.blog__content h3 {
+    font-size: 16px;
+    margin-bottom: 2px;
+}
+.blog__content h3{
+    font-size:16px;
+    margin-bottom:2px
+}
+.blog__content p{
+    margin-bottom:0;
+    font-size:14px;
+    line-height:24px
+}
+.blog__meta{
+    margin-bottom:12px;
+    margin-top: 10px;
+}
+.blog__content.white-bg {
+    box-shadow: 0 1px 9px 1px #e3dcdc;
+}
+h2.blogs {
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 25px;
+    margin-top: 15px;
+    font-family: 'Poppins', sans-serif !important;
+}
+.blog__slider {
+    padding-left: 10px;
+    padding-right: 10px;
+}
 .nav > li > ul{
   background:rgba(0,0,0,0.1);
   position:absolute;
@@ -1699,7 +1741,7 @@ button.t-y-btn {
   padding:4px 10px;
 }
 .nav > li > ul > li > a:hover {
-    background-color: #ff482e;
+    background-color: #031520;
     color: #fff;
 }
 .nav > li:hover > ul{
@@ -1724,7 +1766,7 @@ button.t-y-btn {
     top: 102%;
     left: 0;
     width: 700px;
-    background: #ff482e;
+    background: #031520;
     z-index: 100000000000000000000000;
 }
 ul.dropdown-box-mega li a {
@@ -1793,8 +1835,8 @@ ul.dropdown-box-mega li a {
     width: 100%;
 }
 .button--primary.login-form__button {
-    background-color: #ff482e;
-    border-color: #ff482e;
+    background-color: #031520;
+    border-color: #031520;
     color: white;
     position: unset !important;
     width: 100% !important;
@@ -1880,7 +1922,7 @@ li.main-li-nav .fa-angle-down {
 }
 
 .nav .big-nav > ul > li.show > ul {
-    background: #ff482e;
+    background: #031520;
     display: block;
     color: #fff;
 }
@@ -2262,7 +2304,7 @@ width: 100%;
     height: 40px;
 }
 .newsletter-form button {
-    background: rgb(232 88 52);
+    background: #031520;
     border: 0;
     outline: 0;
     color: #fff;
@@ -2357,8 +2399,18 @@ a {}
     text-align: center;
     font-size: 16px;
 }
+.blog__slider .owl-nav {
+    display: flex;
+    position: absolute;
+    top: -32px;
+    right: 0;
+}
+
+.blog__slider .owl-nav button {
+    margin-right: 10px;
+}
 .footer-bottom span a {
-    color: rgb(225 86 46);
+    color: #031520;
 }
 .slider-wrapper {
     margin: 100px 0px;
@@ -2601,7 +2653,7 @@ ul.nav li.main-li-nav:first-child a {
 }
 span.pro-price {
     display: block;
-    color: #ff482e;
+    color: #031520;
     font-size: 20px;
     border-bottom: 1px solid #efefef;
     padding-bottom: 20px;
@@ -2667,7 +2719,7 @@ ul.nav li.main-li-nav:last-child .dropdown a i {
     padding: 50px 36px;
     border-radius: 25.51px;
     box-shadow: 0px 0px 14.45517px 4.089994px #00000033;
-    background: linear-gradient(to right, #ff482e 50%, white 50%);
+    background: linear-gradient(to right, #031520 50%, white 50%);
     background-size: 201% 100%;
     cursor:pointer;
     background-position: right bottom;
@@ -2697,10 +2749,10 @@ ul.nav li.main-li-nav:last-child .dropdown a i {
 }
 .service-box-blue h5 {
     
-    border-bottom: 5px solid #ff482e;
+    border-bottom: 5px solid #031520;
 }
 .service-box-yellow h5 {
-    border-bottom: 5px solid #ff482e;
+    border-bottom: 5px solid #031520;
 }
 .service-box p {
     font-family: 'Montserrat';

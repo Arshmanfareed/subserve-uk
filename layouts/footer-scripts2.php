@@ -505,6 +505,9 @@
 <script async src="assets/js/jquery.classycountdown.js"></script>
 <script async src="assets/js/jquery.knob.js"></script>
 <script async src="assets/js/jquery.throttle.js"></script>
+<!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
 <!-- slick carousel -->
 <script  type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
@@ -517,7 +520,26 @@
 
 
 <script>
-
+$('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:true,
+    navText: [
+                '<i class="fa-solid fa-chevron-left"></i>', // Left icon
+                '<i class="fa-solid fa-chevron-right"></i>' // Right icon
+            ],
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:3
+        },
+        1000:{
+            items:5
+        }
+    }
+})
     $(document).ready(function () {
         $('.search-input').on('keyup keypress', function(event) {
   var key = event.keyCode || event.which;

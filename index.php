@@ -486,6 +486,58 @@ include('src/connection.php');
             </div>
         </div>
     </div>
+    <div class="container">
+    <div class="row">
+        
+        <div class="col-xl-12">
+            <h2 class="blogs">New Blogs</h2>
+            <div class="blog__slider owl-carousel blog-grid-1 ">
+                <?php 
+                    $blogQuery = "SELECT * FROM blogs WHERE status = 'publish' AND is_archive = 0 ORDER BY created_at DESC LIMIT 10";
+                        
+                    $blogResult = mysqli_query($conn, $blogQuery);
+                    
+                    if ($blogResult && mysqli_num_rows($blogResult) > 0) {
+                        while ($blogRow = mysqli_fetch_assoc($blogResult)) {
+                            // Extract data for each blog post
+                            $post_title = $blogRow['title'];
+                            $post_slug = $blogRow['blog_slug'];
+                            $post_date = date("d-M-Y", strtotime($blogRow['created_at'])) ;
+                            // $category_name = $blogRow['category_name'];
+                            // $category_slug = $blogRow['category_slug'];
+                            $post_excerpt = $blogRow['content'];
+                            $featured_img = $blogRow['image_url'];
+                            // Trim excerpt to 105 characters
+                            $trimmed_excerpt = strlen($post_excerpt) > 110 ? substr($post_excerpt, 0, 110) . '...' : $post_excerpt;
+                    
+                            // HTML structure for each blog post
+                            echo '
+                                <div class="blog__item mb-30">
+                                    <div class="blog__thumb fix">
+                                        <a href="blog/' . $post_slug . '">
+                                            <img src="http://localhost/subserve/wr-admin/pages/blogs/'.$featured_img.'" alt="'.$featured_img.'" />
+                                        </a>
+                                    </div>
+                                    <div class="blog__content white-bg">
+                                        <h3><a href="blog/' . $post_slug . '">' . $post_title . '</a></h3>
+                                        <div class="blog__meta">
+                                            <span>Date:</span>
+                                            <span class="date">' . $post_date . '</span>
+                                        </div>
+                                        <p>' . htmlspecialchars($trimmed_excerpt) . '<a href="blog/' . $post_slug . '">Read more</a></p>
+                                        </div>
+                                </div>';
+                        }
+                    } else {
+                        // No blog posts found
+                        echo "No blog posts available.";
+                    }
+                ?>
+            </div>
+        </div>
+    </div>
+    </div>
+    
 
 
     <div class="collaborator-slider-wrapper slider-wrapper">
@@ -503,17 +555,21 @@ include('src/connection.php');
                 <div class="col-md-12">
                     <div class="partners-slide slider-wrap">
                         <!-- <div class="slider-image-wrapper"><img class="img-fluid" src="/assets/img/partners/pngegg (10).png"></div> -->
-                        <div class="slider-image-wrapper"><img class="img-fluid" src="/assets/img/partners/pngegg (11).png"></div>
-                        <div class="slider-image-wrapper"><img class="img-fluid" src="/assets/img/partners/pngegg (12).png"></div>
-                        <div class="slider-image-wrapper"><img class="img-fluid" src="/assets/img/partners/pngegg (13).png"></div>
-                        <div class="slider-image-wrapper"><img class="img-fluid" src="/assets/img/partners/pngegg (14).png"></div>
-                        <div class="slider-image-wrapper"><img class="img-fluid" src="/assets/img/partners/pngegg (15).png"></div>
-                        <div class="slider-image-wrapper"><img class="img-fluid" src="/assets/img/partners/pngegg (16).png"></div>
-                        <div class="slider-image-wrapper"><img class="img-fluid" src="/assets/img/partners/pngegg (17).png"></div>
-                        <div class="slider-image-wrapper"><img class="img-fluid" src="/assets/img/partners/pngegg (6) (1).png"></div>
-                        <div class="slider-image-wrapper"><img class="img-fluid" src="/assets/img/partners/pngegg (7) (1).png"></div>
+                        <div class="slider-image-wrapper"><img class="img-fluid" src="http://localhost/subserve/assets/img/partners/pngegg (11).png"></div>
+                        <div class="slider-image-wrapper"><img class="img-fluid" src="http://localhost/subserve/assets/img/partners/pngegg (12).png"></div>
+                        <div class="slider-image-wrapper"><img class="img-fluid" src="http://localhost/subserve/assets/img/partners/pngegg (13).png"></div>
+                        <div class="slider-image-wrapper"><img class="img-fluid" src="http://localhost/subserve/assets/img/partners/pngegg (14).png"></div>
+                        <div class="slider-image-wrapper"><img class="img-fluid" src="http://localhost/subserve/assets/img/partners/pngegg (15).png"></div>
+                        <div class="slider-image-wrapper"><img class="img-fluid" src="http://localhost/subserve/assets/img/partners/pngegg (16).png"></div>
+                        <div class="slider-image-wrapper"><img class="img-fluid" src="http://localhost/subserve/assets/img/partners/pngegg (17).png"></div>
+                        <div class="slider-image-wrapper"><img class="img-fluid" src="http://localhost/subserve/assets/img/partners/pngegg (6) (1).png"></div>
+                        <div class="slider-image-wrapper"><img class="img-fluid" src="http://localhost/subserve/assets/img/partners/pngegg (7) (1).png"></div>
                         <!-- <div class="slider-image-wrapper"><img class="img-fluid" src="/assets/img/partners/pngegg (8) (1).png"></div> -->
-                        <div class="slider-image-wrapper"><img class="img-fluid" src="/assets/img/partners/pngegg (9).png"></div>
+                        <div class="slider-image-wrapper"><img class="img-fluid" src="http://localhost/subserve/assets/img/partners/pngegg (9).png"></div>
+                        <div class="slider-image-wrapper"><img class="img-fluid" src="http://localhost/subserve/assets/img/partners/Extreme Networks.webp"></div>
+                        <div class="slider-image-wrapper"><img class="img-fluid" src="http://localhost/subserve/assets/img/partners/Fujitsu.webp"></div>
+                        <div class="slider-image-wrapper"><img class="img-fluid" src="http://localhost/subserve/assets/img/partners/Hitachi.webp"></div>
+                        <div class="slider-image-wrapper"><img class="img-fluid" src="http://localhost/subserve/assets/img/partners/Quantum.webp"></div>
                     </div>
                 </div>
             </div>
