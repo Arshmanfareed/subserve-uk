@@ -405,7 +405,7 @@
                     <div class="footer-main-col">
                         <!-- <img src="/assets/img/f-logo.png"> -->
                         <p>Subserve - Your Trusted Source for Cutting-Edge Data Storage Solutions. Empower your digital journey with reliable and innovative storage solutions from Subserve .</p>
-                        <span>PHONE: <a href="tel: +44 121 630 3773"> +44 121 630 3773</a></span>
+                        <!-- <span>PHONE: <a href="tel: +44 121 630 3773"> +44 121 630 3773</a></span> -->
                         <span>EMAIL: <a href="mailto:sales@subserve.co.uk">sales@subserve.co.uk</a></span>
                     </div>
                 </div>                
@@ -427,6 +427,7 @@
                                 <li><i class="fa-brands fa-pinterest-p"></i></li>
                                 <li><i class="fa-brands fa-linkedin"></i></li>
                             </ul>
+                            <img src="/assets/img/extra-img/trustpilot-logo.png" class="img-fluid trunst">
                         </div>
                     </div>
                     <!-- <div class="footer-nav-list resources-footer">

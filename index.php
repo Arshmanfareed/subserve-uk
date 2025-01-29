@@ -8,7 +8,9 @@ include('src/connection.php');
 
     
         <div class="row main-baneers">
-            <div class="col-md-9 baneers" style="background-image: url('http://localhost/subserve/assets/ELEVATE.jpg');"></div>
+            <div class="col-md-9 baneers" style="background-image: url('http://localhost/subserve/assets/ELEVATE.jpg');">
+                <iframe id="vimeoPlayer" class="" src="https://player.vimeo.com/video/915950094?autoplay=1&muted=1&loop=1&badge=0&autopause=0&player_id=0&app_id=58479" frameborder="0" allow="autoplay; fullscreen" allowfullscreen title="4681689 Ram Sticks Memory Computer 1280X720 resizeed"></iframe>
+            </div>
             <div class="col-md-3">
             <form class="flex-component__mobileUp-3 login-form login-form-standard login-form--home login-form--carousel form" action="/login.php?action=check_login" method="post">
         

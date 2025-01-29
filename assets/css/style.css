@@ -1714,6 +1714,7 @@ button.t-y-btn {
 }
 .blog__content.white-bg {
     box-shadow: 0 1px 9px 1px #e3dcdc;
+    height: 260px;
 }
 h2.blogs {
     font-size: 25px;
@@ -2613,6 +2614,7 @@ ul.nav li.main-li-nav:first-child a {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    overflow: hidden;
 }
 .pro-box {
     background-color: white;
@@ -2776,11 +2778,17 @@ ul.dropdown-box-mega li a {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 100vw;
+    width: 100%;
     height: 177vh;
     transform: translate(-50%, -50%);
     opacity: 1;
     transition: opacity 0.3s ease;
+}
+img.img-fluid.trunst {
+    width: 160px;
+    margin-top: 20px;
+    margin-bottom: 35px;
+    filter: brightness(-5.5);
 }
 #vimeoPlayer.loaded {
     opacity: 1; 

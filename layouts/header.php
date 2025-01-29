@@ -375,7 +375,7 @@ if(!empty($shemaMarkup3)){ ?>
             </div>
             <div class="col-md-3">
               <div class="number-div">
-                <a href="tel:+1 (0)888 382 1386"><i class="fa-solid fa-headphones"></i><span>+1 (0)888 382 1386</span></a>
+                <!-- <a href="tel:+1 (0)888 382 1386"><i class="fa-solid fa-headphones"></i><span>+1 (0)888 382 1386</span></a> -->
               </div>
             </div>
             <div class="col-xs-7 col-sm-7 col-md-6 col-lg-9 d-flex align-items-center justify-content-end hidden-lg">
